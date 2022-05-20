@@ -104,6 +104,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ventas2022DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventas2022DataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAddin.resx">
       <DependentUpon>FrmAddin.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYeison.resx">
+      <DependentUpon>FrmYeison.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +153,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Ventas2022DataSet.xsc">
+      <DependentUpon>Ventas2022DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ventas2022DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ventas2022DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ventas2022DataSet.xss">
+      <DependentUpon>Ventas2022DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
