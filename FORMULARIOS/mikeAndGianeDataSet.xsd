@@ -141,6 +141,14 @@ SELECT productid, productname, unitprice, stock FROM productos WHERE (productid 
               <Mapping SourceColumn="stock" DataSetColumn="stock" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="mikeAndGianeConnectionString (Settings)" DbObjectName="mikeAndGiane.dbo.productos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="consultaTabla" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="consultaTabla" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="consultaTabla">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT productid, productname, unitprice, stock FROM dbo.productos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="mikeAndGianeConnectionString (Settings)" DbObjectName="mikeAndGiane.dbo.productos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
@@ -159,7 +167,7 @@ SELECT productid, productname, unitprice, stock FROM productos WHERE (productid 
   <xs:element name="mikeAndGianeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mikeAndGianeDataSet" msprop:Generator_UserDSName="mikeAndGianeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="personas" msprop:Generator_TableClassName="personasDataTable" msprop:Generator_TableVarName="tablepersonas" msprop:Generator_RowChangedName="personasRowChanged" msprop:Generator_TablePropName="personas" msprop:Generator_RowDeletingName="personasRowDeleting" msprop:Generator_RowChangingName="personasRowChanging" msprop:Generator_RowEvHandlerName="personasRowChangeEventHandler" msprop:Generator_RowDeletedName="personasRowDeleted" msprop:Generator_RowClassName="personasRow" msprop:Generator_UserTableName="personas" msprop:Generator_RowEvArgName="personasRowChangeEvent">
+        <xs:element name="personas" msprop:Generator_TableClassName="personasDataTable" msprop:Generator_TableVarName="tablepersonas" msprop:Generator_TablePropName="personas" msprop:Generator_RowDeletingName="personasRowDeleting" msprop:Generator_RowChangingName="personasRowChanging" msprop:Generator_RowEvHandlerName="personasRowChangeEventHandler" msprop:Generator_RowDeletedName="personasRowDeleted" msprop:Generator_UserTableName="personas" msprop:Generator_RowChangedName="personasRowChanged" msprop:Generator_RowEvArgName="personasRowChangeEvent" msprop:Generator_RowClassName="personasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="dni" msprop:Generator_ColumnVarNameInTable="columndni" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_UserColumnName="dni" type="xs:int" />
@@ -194,7 +202,7 @@ SELECT productid, productname, unitprice, stock FROM productos WHERE (productid 
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="productos" msprop:Generator_TableClassName="productosDataTable" msprop:Generator_TableVarName="tableproductos" msprop:Generator_RowChangedName="productosRowChanged" msprop:Generator_TablePropName="productos" msprop:Generator_RowDeletingName="productosRowDeleting" msprop:Generator_RowChangingName="productosRowChanging" msprop:Generator_RowEvHandlerName="productosRowChangeEventHandler" msprop:Generator_RowDeletedName="productosRowDeleted" msprop:Generator_RowClassName="productosRow" msprop:Generator_UserTableName="productos" msprop:Generator_RowEvArgName="productosRowChangeEvent">
+        <xs:element name="productos" msprop:Generator_TableClassName="productosDataTable" msprop:Generator_TableVarName="tableproductos" msprop:Generator_TablePropName="productos" msprop:Generator_RowDeletingName="productosRowDeleting" msprop:Generator_RowChangingName="productosRowChanging" msprop:Generator_RowEvHandlerName="productosRowChangeEventHandler" msprop:Generator_RowDeletedName="productosRowDeleted" msprop:Generator_UserTableName="productos" msprop:Generator_RowChangedName="productosRowChanged" msprop:Generator_RowEvArgName="productosRowChangeEvent" msprop:Generator_RowClassName="productosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="productid" msprop:Generator_ColumnVarNameInTable="columnproductid" msprop:Generator_ColumnPropNameInRow="productid" msprop:Generator_ColumnPropNameInTable="productidColumn" msprop:Generator_UserColumnName="productid" type="xs:int" />

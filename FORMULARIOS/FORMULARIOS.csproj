@@ -46,9 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accesoDatosCliente.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="entidadcliente.cs" />
     <Compile Include="FrmAddin.cs">
       <SubType>Form</SubType>
     </Compile>

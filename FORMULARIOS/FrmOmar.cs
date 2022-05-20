@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;//activarse using
+using System.Data.SqlClient;
 
 namespace FORMULARIOS
 {
@@ -21,55 +21,53 @@ namespace FORMULARIOS
         SqlConnection  conex = new SqlConnection("Data Source=MIKES;Initial Catalog=mikeAndGiane;Integrated Security=True");
         private void FrmOmar_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'mikeAndGianeDataSet.personas' Puede moverla o quitarla según sea necesario.
-            this.personasTableAdapter.Fill(this.mikeAndGianeDataSet.personas);
-            // TODO: esta línea de código carga datos en la tabla 'mikeAndGianeDataSet.productos' Puede moverla o quitarla según sea necesario.
-            this.productosTableAdapter.Fill(this.mikeAndGianeDataSet.productos);
 
         }
+        String conexion = "Data Source=MIKES;Initial Catalog=mikeAndGiane;Integrated Security=True";
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            SqlConnection cnn = new SqlConnection(conexion);
+            int id = Convert.ToInt32(txtProductid.Text);
+            double precio = Convert.ToDouble( txtUnitprice.Text);
+            int  stock = Convert.ToInt32(txtStock.Text);
+
+            String cmd = "insert into productos values(" + id + ",'" + txtProductname.Text + "'," + precio + "," + stock + ");";
+            cnn.Open();
+                try
+            {
+                SqlCommand insertar = new SqlCommand(cmd, cnn);
+                insertar.ExecuteNonQuery();
+                MessageBox.Show("Todo good");
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al agregar");
+            }
+            finally
+            {
+                cnn.Close();
+            }
+       
+           
+        }
+
+        private void consultaTablaToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
-                this.productosTableAdapter.FillBy(this.mikeAndGianeDataSet.productos);
+                this.productosTableAdapter.consultaTabla(this.mikeAndGianeDataSet.productos);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
-        }
-
-        private void btnInsertar_Click(object sender, EventArgs e)
-        {
-            SqlCommand Insertar = new SqlCommand("insert into productos values(@productid,@productame,@unitprice,@stock)", conex);
-            conex.Open();
-            try
-            {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    Insertar.Parameters.Clear();
-                    Insertar.Parameters.AddWithValue("@productid",Convert.ToInt32(row.Cells["Column1"]));
-                    Insertar.Parameters.AddWithValue("@prodctnamee", Convert.ToString(row.Cells["Column2"]));
-                    Insertar.Parameters.AddWithValue("@unitprice", Convert.ToDouble(row.Cells["Column3"]));
-                    Insertar.Parameters.AddWithValue("@stock", Convert.ToInt32(row.Cells["Column4"]));
-                    Insertar.ExecuteNonQuery();
-                    MessageBox.Show("datos agregados");
-
-                }
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("error al insertar");
-
-            }
-            finally
-            {
-                conex.Close();
-            }
-            
         }
     }
 }

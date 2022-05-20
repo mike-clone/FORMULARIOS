@@ -1389,9 +1389,9 @@ namespace FORMULARIOS.mikeAndGianeDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[personas] ([dni], [Nombre], [apellidomat], [apellidopat], [dir" +
-                "eccion]) VALUES (@dni, @Nombre, @apellidomat, @apellidopat, @direccion);\r\nSELECT" +
-                " dni, Nombre, apellidomat, apellidopat, direccion FROM personas WHERE (dni = @dn" +
-                "i)";
+                "eccion]) VALUES (@dni, @Nombre, @apellidomat, @apellidopat, @direccion);\nSELECT " +
+                "dni, Nombre, apellidomat, apellidopat, direccion FROM personas WHERE (dni = @dni" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dni", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1817,8 +1817,8 @@ SELECT dni, Nombre, apellidomat, apellidopat, direccion FROM personas WHERE (dni
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[productos] ([productid], [productname], [unitprice], [stock]) " +
-                "VALUES (@productid, @productname, @unitprice, @stock);\r\nSELECT productid, produc" +
-                "tname, unitprice, stock FROM productos WHERE (productid = @productid)";
+                "VALUES (@productid, @productname, @unitprice, @stock);\nSELECT productid, product" +
+                "name, unitprice, stock FROM productos WHERE (productid = @productid)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1852,7 +1852,7 @@ SELECT productid, productname, unitprice, stock FROM productos WHERE (productid 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT productid, productname, unitprice, stock FROM dbo.productos";
@@ -1861,6 +1861,10 @@ SELECT productid, productname, unitprice, stock FROM productos WHERE (productid 
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT productid, productname, unitprice, stock FROM dbo.productos";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT productid, productname, unitprice, stock FROM dbo.productos";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1891,8 +1895,21 @@ SELECT productid, productname, unitprice, stock FROM productos WHERE (productid 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(mikeAndGianeDataSet.productosDataTable dataTable) {
+        public virtual int consultaTabla(mikeAndGianeDataSet.productosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(mikeAndGianeDataSet.productosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
