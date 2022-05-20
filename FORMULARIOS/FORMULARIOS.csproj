@@ -104,6 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddin.resx">
+      <DependentUpon>FrmAddin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGianella.resx">
       <DependentUpon>FrmGianella.cs</DependentUpon>
     </EmbeddedResource>
