@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADDINDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADDINDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="FrmAddin.cs">
       <SubType>Form</SubType>
@@ -131,6 +136,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ADDINDataSet.xsc">
+      <DependentUpon>ADDINDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ADDINDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ADDINDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ADDINDataSet.xss">
+      <DependentUpon>ADDINDataSet.xsd</DependentUpon>
+    </None>
     <None Include="mikeAndGianeDataSet.xsc">
       <DependentUpon>mikeAndGianeDataSet.xsd</DependentUpon>
     </None>

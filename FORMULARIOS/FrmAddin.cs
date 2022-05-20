@@ -17,7 +17,7 @@ namespace FORMULARIOS
         {
             InitializeComponent();
         }
-        string conexion = "Data Source=DESKTOP-RL2KS61\\SQLEXPRESS;Initial Catalog=ADDIN;Integrated Security=True";
+        string conexion = "Data Source=DESKTOP-RL2KS61\\SQLEXPRESS;Initial Catalog = ADDIN; Integrated Security = True";
         private void txtdes_TextChanged(object sender, EventArgs e)
         {
 
@@ -104,6 +104,11 @@ namespace FORMULARIOS
         private void txtcod_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
