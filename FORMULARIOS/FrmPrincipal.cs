@@ -22,11 +22,7 @@ namespace FORMULARIOS
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmOmar callback = new FrmOmar();
-            callback.Show();
-        }
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -68,6 +64,12 @@ namespace FORMULARIOS
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void btnOmar_Click(object sender, EventArgs e)
+        {
+            FrmOmar callback = new FrmOmar();
+            callback.Show();
         }
     }
 }

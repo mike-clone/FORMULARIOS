@@ -15,7 +15,7 @@ namespace FORMULARIOS
         public static SqlConnection Conectarse()
         {
             SqlConnection conexion = new SqlConnection();
-            conexion.ConnectionString = "Data Source=DESKTOP-A1OPPUQ\\SQLEXPRESS; Initial Catalog=Ventas2022;Integrated Security=true";
+            conexion.ConnectionString = "Data Source=MIKES\\SQLEXPRESS; Initial Catalog=mikeAndGiane;Integrated Security=true";
             return conexion;
         }
 

@@ -29,7 +29,6 @@ namespace FORMULARIOS
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOmar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -37,17 +36,8 @@ namespace FORMULARIOS
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnOmar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnOmar
-            // 
-            this.btnOmar.Location = new System.Drawing.Point(21, 43);
-            this.btnOmar.Name = "btnOmar";
-            this.btnOmar.Size = new System.Drawing.Size(140, 71);
-            this.btnOmar.TabIndex = 0;
-            this.btnOmar.Text = "omar";
-            this.btnOmar.UseVisualStyleBackColor = true;
-            this.btnOmar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -119,11 +109,22 @@ namespace FORMULARIOS
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnOmar
+            // 
+            this.btnOmar.Location = new System.Drawing.Point(35, 43);
+            this.btnOmar.Name = "btnOmar";
+            this.btnOmar.Size = new System.Drawing.Size(116, 74);
+            this.btnOmar.TabIndex = 8;
+            this.btnOmar.Text = "Omar";
+            this.btnOmar.UseVisualStyleBackColor = true;
+            this.btnOmar.Click += new System.EventHandler(this.btnOmar_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOmar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -131,7 +132,6 @@ namespace FORMULARIOS
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnOmar);
             this.Name = "FrmPrincipal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -140,8 +140,6 @@ namespace FORMULARIOS
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnOmar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -149,6 +147,7 @@ namespace FORMULARIOS
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnOmar;
     }
 }
 

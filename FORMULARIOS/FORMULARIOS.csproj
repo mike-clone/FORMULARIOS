@@ -97,8 +97,19 @@
     <Compile Include="FrmYeison.Designer.cs">
       <DependentUpon>FrmYeison.cs</DependentUpon>
     </Compile>
+    <Compile Include="mikeAndGianeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mikeAndGianeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmGianella.resx">
+      <DependentUpon>FrmGianella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOmar.resx">
+      <DependentUpon>FrmOmar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +122,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="mikeAndGianeDataSet.xsc">
+      <DependentUpon>mikeAndGianeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mikeAndGianeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mikeAndGianeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mikeAndGianeDataSet.xss">
+      <DependentUpon>mikeAndGianeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
