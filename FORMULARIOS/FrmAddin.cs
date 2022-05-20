@@ -45,7 +45,30 @@ namespace FORMULARIOS
             }
         }
 
-       
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
@@ -57,7 +80,30 @@ namespace FORMULARIOS
                 cmd.ExecuteNonQuery();
             }
         }
- 
 
+        private void txtfech_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtruc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

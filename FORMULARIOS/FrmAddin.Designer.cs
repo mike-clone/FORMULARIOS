@@ -80,7 +80,7 @@ namespace FORMULARIOS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(661, 126);
+            this.label6.Location = new System.Drawing.Point(677, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 16);
             this.label6.TabIndex = 24;
@@ -139,7 +139,7 @@ namespace FORMULARIOS
             // 
             // txtfech
             // 
-            this.txtfech.Location = new System.Drawing.Point(665, 170);
+            this.txtfech.Location = new System.Drawing.Point(649, 170);
             this.txtfech.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfech.Name = "txtfech";
             this.txtfech.Size = new System.Drawing.Size(100, 22);
