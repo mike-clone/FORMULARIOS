@@ -29,6 +29,7 @@ namespace FORMULARIOS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -45,7 +46,13 @@ namespace FORMULARIOS
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.addinDataSet1 = new FORMULARIOS.ADDINDataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mikeAndGianeDataSet = new FORMULARIOS.mikeAndGianeDataSet();
+            this.mikeAndGianeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -218,12 +225,36 @@ namespace FORMULARIOS
             this.addinDataSet1.DataSetName = "ADDINDataSet";
             this.addinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.mikeAndGianeDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(37, 329);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 265);
+            this.dataGridView1.TabIndex = 39;
+            // 
+            // mikeAndGianeDataSet
+            // 
+            this.mikeAndGianeDataSet.DataSetName = "mikeAndGianeDataSet";
+            this.mikeAndGianeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mikeAndGianeDataSetBindingSource
+            // 
+            this.mikeAndGianeDataSetBindingSource.DataSource = this.mikeAndGianeDataSet;
+            this.mikeAndGianeDataSetBindingSource.Position = 0;
+            // 
             // FrmGianella
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FORMULARIOS.Properties.Resources.buyer_persona;
             this.ClientSize = new System.Drawing.Size(860, 645);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnSalir);
@@ -242,6 +273,9 @@ namespace FORMULARIOS
             this.Name = "FrmGianella";
             this.Text = "Gianella";
             ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +299,8 @@ namespace FORMULARIOS
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnActualizar;
         private ADDINDataSet addinDataSet1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource mikeAndGianeDataSetBindingSource;
+        private mikeAndGianeDataSet mikeAndGianeDataSet;
     }
 }

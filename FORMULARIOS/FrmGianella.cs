@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
 namespace FORMULARIOS
 {
     public partial class FrmGianella : Form
@@ -29,7 +30,11 @@ namespace FORMULARIOS
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-
+ 
+            using(SqlConnection cn = new SqlConnection("Data Source=LAPTOP-TIFHNC74\SQLEXPRESS;Initial Catalog=mikeAndGiane;Integrated Security=True"))
+                (
+                 Sql
+                 )
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
