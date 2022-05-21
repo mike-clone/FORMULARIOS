@@ -30,6 +30,7 @@ namespace FORMULARIOS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddin));
             this.btneliminar = new System.Windows.Forms.Button();
             this.btactualizar = new System.Windows.Forms.Button();
             this.btagregar = new System.Windows.Forms.Button();
@@ -52,11 +53,13 @@ namespace FORMULARIOS
             this.nEGOCIOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnmostar = new System.Windows.Forms.Button();
             this.addinDataSet1 = new FORMULARIOS.ADDINDataSet();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDDINDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btneliminar
@@ -246,11 +249,23 @@ namespace FORMULARIOS
             this.addinDataSet1.DataSetName = "ADDINDataSet";
             this.addinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(569, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FrmAddin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnmostar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -276,6 +291,7 @@ namespace FORMULARIOS
             ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +321,6 @@ namespace FORMULARIOS
         private System.Windows.Forms.BindingSource nEGOCIOBindingSource1;
         private System.Windows.Forms.Button btnmostar;
         private ADDINDataSet addinDataSet1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -185,5 +185,10 @@ private void label6_Click(object sender, EventArgs e)
                 dataGridView1.DataSource = dt;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
