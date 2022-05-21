@@ -17,7 +17,7 @@ namespace FORMULARIOS
         {
             InitializeComponent();
         }
-        string conexion = "Data Source=DESKTOP-RL2KS61\\SQLEXPRESS;Initial Catalog = ADDIN; Integrated Security = True";
+        string conexion = "Data Source=LAPTOP-TIFHNC74\SQLEXPRESS;Initial Catalog=mikeAndGiane;Integrated Security=True";
         private void txtdes_TextChanged(object sender, EventArgs e)
         {
 
