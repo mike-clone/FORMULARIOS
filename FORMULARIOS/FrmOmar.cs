@@ -18,12 +18,18 @@ namespace FORMULARIOS
             InitializeComponent();
         }
 
-        SqlConnection  conex = new SqlConnection("Data Source=MIKES;Initial Catalog=mikeAndGiane;Integrated Security=True");
+       
+        SqlConnection  conex = new SqlConnection("Data Source=MIKES;Initial Catalog=mikeAndGiane;Integrated Security=True");//omar
+        //SqlConnection  conex = new SqlConnection("Data Source=DESKTOP-RL2KS61\\SQLEXPRESS;Initial Catalog=ADDIN;Integrated Security=True");
+
+
         private void FrmOmar_Load(object sender, EventArgs e)
         {
 
         }
-        String conexion = "Data Source=MIKES;Initial Catalog=mikeAndGiane;Integrated Security=True";
+        String conexion = "Data Source=MIKES;Initial Catalog=mikeAndGiane;Integrated Security=True";//omar
+         //String conexion = "Data Source=DESKTOP-RL2KS61\\SQLEXPRESS;Initial Catalog=ADDIN;Integrated Security=True";//addin
+
         private void button1_Click(object sender, EventArgs e)
         {
             Dispose();

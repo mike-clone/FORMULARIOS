@@ -18,7 +18,9 @@ namespace FORMULARIOS
             InitializeComponent();
         }
 
-        string conexion = "Data Source=DESKTOP-A1OPPUQ\\SQLEXPRESS;Initial Catalog=Ventas2022;Integrated Security=True";
+        // string conexion = "Data Source=DESKTOP-A1OPPUQ\\SQLEXPRESS;Initial Catalog=Ventas2022;Integrated Security=True";//yeison
+        string conexion = "Data Source=DESKTOP-RL2KS61\\SQLEXPRESS;Initial Catalog=ADDIN;Integrated Security=True"; //addin
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {

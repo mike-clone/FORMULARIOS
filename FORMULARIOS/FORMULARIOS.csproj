@@ -52,11 +52,11 @@
       <DependentUpon>ADDINDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="FrmAddin.cs">
+    <Compile Include="FrmAddinT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddin.Designer.cs">
-      <DependentUpon>FrmAddin.cs</DependentUpon>
+    <Compile Include="FrmAddinT.Designer.cs">
+      <DependentUpon>FrmAddinT.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCleiner.cs">
       <SubType>Form</SubType>
@@ -112,8 +112,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ventas2022DataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmAddin.resx">
-      <DependentUpon>FrmAddin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddinT.resx">
+      <DependentUpon>FrmAddinT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGianella.resx">
       <DependentUpon>FrmGianella.cs</DependentUpon>
@@ -185,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buyer-persona.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paltas.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
