@@ -29,6 +29,7 @@ namespace FORMULARIOS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btactualizar = new System.Windows.Forms.Button();
             this.btagregar = new System.Windows.Forms.Button();
@@ -44,13 +45,25 @@ namespace FORMULARIOS
             this.txtnom = new System.Windows.Forms.TextBox();
             this.txtruc = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.aDDINDataSet = new FORMULARIOS.ADDINDataSet();
+            this.nEGOCIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nEGOCIOTableAdapter = new FORMULARIOS.ADDINDataSetTableAdapters.NEGOCIOTableAdapter();
+            this.nEGOCIOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnmostar = new System.Windows.Forms.Button();
+            this.addinDataSet1 = new FORMULARIOS.ADDINDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aDDINDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(421, 239);
+            this.btneliminar.Location = new System.Drawing.Point(387, 239);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(84, 23);
+            this.btneliminar.Size = new System.Drawing.Size(118, 23);
             this.btneliminar.TabIndex = 27;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -177,7 +190,7 @@ namespace FORMULARIOS
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(596, 239);
+            this.button1.Location = new System.Drawing.Point(687, 239);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 36;
@@ -185,11 +198,61 @@ namespace FORMULARIOS
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 286);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(731, 223);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // aDDINDataSet
+            // 
+            this.aDDINDataSet.DataSetName = "ADDINDataSet";
+            this.aDDINDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nEGOCIOBindingSource
+            // 
+            this.nEGOCIOBindingSource.DataMember = "NEGOCIO";
+            this.nEGOCIOBindingSource.DataSource = this.aDDINDataSet;
+            // 
+            // nEGOCIOTableAdapter
+            // 
+            this.nEGOCIOTableAdapter.ClearBeforeFill = true;
+            // 
+            // nEGOCIOBindingSource1
+            // 
+            this.nEGOCIOBindingSource1.DataMember = "NEGOCIO";
+            this.nEGOCIOBindingSource1.DataSource = this.aDDINDataSet;
+            // 
+            // btnmostar
+            // 
+            this.btnmostar.Location = new System.Drawing.Point(533, 239);
+            this.btnmostar.Name = "btnmostar";
+            this.btnmostar.Size = new System.Drawing.Size(105, 23);
+            this.btnmostar.TabIndex = 38;
+            this.btnmostar.Text = "MOSTRAR";
+            this.btnmostar.UseVisualStyleBackColor = true;
+            this.btnmostar.Click += new System.EventHandler(this.btnmostar_Click);
+            // 
+            // addinDataSet1
+            // 
+            this.addinDataSet1.DataSetName = "ADDINDataSet";
+            this.addinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // FrmAddin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 464);
+            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.btnmostar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtruc);
             this.Controls.Add(this.txtnom);
@@ -207,6 +270,12 @@ namespace FORMULARIOS
             this.Controls.Add(this.txtdes);
             this.Name = "FrmAddin";
             this.Text = "FrmAddin";
+            this.Load += new System.EventHandler(this.FrmAddin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aDDINDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEGOCIOBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +298,12 @@ namespace FORMULARIOS
         private System.Windows.Forms.TextBox txtnom;
         private System.Windows.Forms.TextBox txtruc;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private ADDINDataSet aDDINDataSet;
+        private System.Windows.Forms.BindingSource nEGOCIOBindingSource;
+        private ADDINDataSetTableAdapters.NEGOCIOTableAdapter nEGOCIOTableAdapter;
+        private System.Windows.Forms.BindingSource nEGOCIOBindingSource1;
+        private System.Windows.Forms.Button btnmostar;
+        private ADDINDataSet addinDataSet1;
     }
 }

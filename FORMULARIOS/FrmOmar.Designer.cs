@@ -31,6 +31,8 @@ namespace FORMULARIOS
         {
             this.components = new System.ComponentModel.Container();
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mikeAndGianeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mikeAndGianeDataSet = new FORMULARIOS.mikeAndGianeDataSet();
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txtProductid = new System.Windows.Forms.TextBox();
@@ -45,32 +47,40 @@ namespace FORMULARIOS
             this.btnInsertar = new System.Windows.Forms.Button();
             this.productosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.productosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.consultaTablaToolStrip = new System.Windows.Forms.ToolStrip();
-            this.consultaTablaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.productidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mikeAndGianeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mikeAndGianeDataSet = new FORMULARIOS.mikeAndGianeDataSet();
+            this.productosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.consultaTablaToolStrip = new System.Windows.Forms.ToolStrip();
+            this.consultaTablaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.productosTableAdapter = new FORMULARIOS.mikeAndGianeDataSetTableAdapters.productosTableAdapter();
             this.personasTableAdapter = new FORMULARIOS.mikeAndGianeDataSetTableAdapters.personasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource3)).BeginInit();
             this.consultaTablaToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // productosBindingSource
             // 
             this.productosBindingSource.DataMember = "productos";
             this.productosBindingSource.DataSource = this.mikeAndGianeDataSetBindingSource;
+            // 
+            // mikeAndGianeDataSetBindingSource
+            // 
+            this.mikeAndGianeDataSetBindingSource.DataSource = this.mikeAndGianeDataSet;
+            this.mikeAndGianeDataSetBindingSource.Position = 0;
+            // 
+            // mikeAndGianeDataSet
+            // 
+            this.mikeAndGianeDataSet.DataSetName = "mikeAndGianeDataSet";
+            this.mikeAndGianeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // personasBindingSource
             // 
@@ -125,7 +135,7 @@ namespace FORMULARIOS
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(104, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "productid";
             // 
@@ -134,7 +144,7 @@ namespace FORMULARIOS
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(259, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "productname";
             // 
@@ -143,7 +153,7 @@ namespace FORMULARIOS
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(402, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "unitPrice";
             // 
@@ -152,7 +162,7 @@ namespace FORMULARIOS
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(553, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(39, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "stock";
             // 
@@ -188,30 +198,7 @@ namespace FORMULARIOS
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(664, 142);
             this.dataGridView1.TabIndex = 20;
-            // 
-            // productosBindingSource3
-            // 
-            this.productosBindingSource3.DataMember = "productos";
-            this.productosBindingSource3.DataSource = this.mikeAndGianeDataSetBindingSource;
-            // 
-            // consultaTablaToolStrip
-            // 
-            this.consultaTablaToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.consultaTablaToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultaTablaToolStripButton});
-            this.consultaTablaToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.consultaTablaToolStrip.Name = "consultaTablaToolStrip";
-            this.consultaTablaToolStrip.Size = new System.Drawing.Size(800, 27);
-            this.consultaTablaToolStrip.TabIndex = 21;
-            this.consultaTablaToolStrip.Text = "consultaTablaToolStrip";
-            // 
-            // consultaTablaToolStripButton
-            // 
-            this.consultaTablaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.consultaTablaToolStripButton.Name = "consultaTablaToolStripButton";
-            this.consultaTablaToolStripButton.Size = new System.Drawing.Size(103, 24);
-            this.consultaTablaToolStripButton.Text = "consultaTabla";
-            this.consultaTablaToolStripButton.Click += new System.EventHandler(this.consultaTablaToolStripButton_Click);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // productidDataGridViewTextBoxColumn
             // 
@@ -245,15 +232,29 @@ namespace FORMULARIOS
             this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
             this.stockDataGridViewTextBoxColumn.Width = 125;
             // 
-            // mikeAndGianeDataSetBindingSource
+            // productosBindingSource3
             // 
-            this.mikeAndGianeDataSetBindingSource.DataSource = this.mikeAndGianeDataSet;
-            this.mikeAndGianeDataSetBindingSource.Position = 0;
+            this.productosBindingSource3.DataMember = "productos";
+            this.productosBindingSource3.DataSource = this.mikeAndGianeDataSetBindingSource;
             // 
-            // mikeAndGianeDataSet
+            // consultaTablaToolStrip
             // 
-            this.mikeAndGianeDataSet.DataSetName = "mikeAndGianeDataSet";
-            this.mikeAndGianeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.consultaTablaToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.consultaTablaToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaTablaToolStripButton});
+            this.consultaTablaToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.consultaTablaToolStrip.Name = "consultaTablaToolStrip";
+            this.consultaTablaToolStrip.Size = new System.Drawing.Size(800, 27);
+            this.consultaTablaToolStrip.TabIndex = 21;
+            this.consultaTablaToolStrip.Text = "consultaTablaToolStrip";
+            // 
+            // consultaTablaToolStripButton
+            // 
+            this.consultaTablaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.consultaTablaToolStripButton.Name = "consultaTablaToolStripButton";
+            this.consultaTablaToolStripButton.Size = new System.Drawing.Size(103, 24);
+            this.consultaTablaToolStripButton.Text = "consultaTabla";
+            this.consultaTablaToolStripButton.Click += new System.EventHandler(this.consultaTablaToolStripButton_Click);
             // 
             // productosTableAdapter
             // 
@@ -284,6 +285,8 @@ namespace FORMULARIOS
             this.Text = "Omar";
             this.Load += new System.EventHandler(this.FrmOmar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource2)).EndInit();
@@ -291,8 +294,6 @@ namespace FORMULARIOS
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource3)).EndInit();
             this.consultaTablaToolStrip.ResumeLayout(false);
             this.consultaTablaToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

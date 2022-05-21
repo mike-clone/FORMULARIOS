@@ -32,10 +32,27 @@ namespace FORMULARIOS
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+            txtcod.Text = "";
+            txtnom.Text = "";
+            txtruc.Text = "";
+            txtdes.Text = "";
+            txtfech.Text = "";
+            
+
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from NEGOCIO ", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                con.Open();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void btagregar_Click(object sender, EventArgs e)
         {
+          
             using (SqlConnection con = new SqlConnection(conexion))
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO NEGOCIO (CODIGO,NOMBRE, RUC,DESCRIPCION,FECHA) VALUES (" + int.Parse(txtcod.Text) + ",'" + txtnom.Text + "'," + Convert.ToDouble(txtruc.Text) + ",'" + txtdes.Text + "', '" + DateTime.Parse(txtfech.Text) + "')", con);
@@ -43,9 +60,28 @@ namespace FORMULARIOS
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
-        }
+            txtcod.Text = "";
+            txtnom.Text = "";
+            txtruc.Text = "";
+            txtdes.Text = "";
+            txtfech.Text = "";
+           
 
-        private void label6_Click(object sender, EventArgs e)
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from NEGOCIO ", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                con.Open();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+
+        }
+        
+      
+
+private void label6_Click(object sender, EventArgs e)
         {
 
         }
@@ -79,6 +115,20 @@ namespace FORMULARIOS
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+            txtcod.Text = "";
+            txtnom.Text = "";
+            txtruc.Text = "";
+            txtdes.Text = "";
+            txtfech.Text = "";
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from NEGOCIO ", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                con.Open();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void txtfech_TextChanged(object sender, EventArgs e)
@@ -109,6 +159,31 @@ namespace FORMULARIOS
         private void button1_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void FrmAddin_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'aDDINDataSet.NEGOCIO' Puede moverla o quitarla según sea necesario.
+            this.nEGOCIOTableAdapter.Fill(this.aDDINDataSet.NEGOCIO);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnmostar_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from NEGOCIO ", con);   
+                da.SelectCommand.CommandType = CommandType.Text;
+                con.Open();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }
