@@ -30,7 +30,6 @@ namespace FORMULARIOS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.txtapellidopat = new System.Windows.Forms.TextBox();
@@ -44,29 +43,27 @@ namespace FORMULARIOS
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.addinDataSet1 = new FORMULARIOS.ADDINDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mikeAndGianeDataSet = new FORMULARIOS.mikeAndGianeDataSet();
             this.mikeAndGianeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).BeginInit();
+            this.mikeAndGianeDataSet = new FORMULARIOS.mikeAndGianeDataSet();
+            this.addinDataSet1 = new FORMULARIOS.ADDINDataSet();
+            this.mikeAndGianeDataSet1 = new FORMULARIOS.mikeAndGianeDataSet1();
+            this.mikeAndGianeDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personasTableAdapter = new FORMULARIOS.mikeAndGianeDataSet1TableAdapters.personasTableAdapter();
+            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidopatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidomatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Red;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(664, 65);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(158, 31);
-            this.btnEliminar.TabIndex = 35;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtNombre
             // 
@@ -185,7 +182,7 @@ namespace FORMULARIOS
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Red;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(664, 189);
+            this.btnSalir.Location = new System.Drawing.Point(664, 101);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(158, 34);
@@ -198,7 +195,7 @@ namespace FORMULARIOS
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.Red;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.Location = new System.Drawing.Point(664, 146);
+            this.btnMostrar.Location = new System.Drawing.Point(664, 65);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(158, 32);
@@ -207,30 +204,19 @@ namespace FORMULARIOS
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.Red;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(664, 111);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(158, 30);
-            this.btnActualizar.TabIndex = 38;
-            this.btnActualizar.Text = "ACTUALIZAR";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // addinDataSet1
-            // 
-            this.addinDataSet1.DataSetName = "ADDINDataSet";
-            this.addinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.mikeAndGianeDataSetBindingSource;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dniDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellidopatDataGridViewTextBoxColumn,
+            this.apellidomatDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.personasBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(37, 329);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -238,15 +224,79 @@ namespace FORMULARIOS
             this.dataGridView1.Size = new System.Drawing.Size(776, 265);
             this.dataGridView1.TabIndex = 39;
             // 
+            // mikeAndGianeDataSetBindingSource
+            // 
+            this.mikeAndGianeDataSetBindingSource.DataSource = this.mikeAndGianeDataSet;
+            this.mikeAndGianeDataSetBindingSource.Position = 0;
+            // 
             // mikeAndGianeDataSet
             // 
             this.mikeAndGianeDataSet.DataSetName = "mikeAndGianeDataSet";
             this.mikeAndGianeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mikeAndGianeDataSetBindingSource
+            // addinDataSet1
             // 
-            this.mikeAndGianeDataSetBindingSource.DataSource = this.mikeAndGianeDataSet;
-            this.mikeAndGianeDataSetBindingSource.Position = 0;
+            this.addinDataSet1.DataSetName = "ADDINDataSet";
+            this.addinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mikeAndGianeDataSet1
+            // 
+            this.mikeAndGianeDataSet1.DataSetName = "mikeAndGianeDataSet1";
+            this.mikeAndGianeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mikeAndGianeDataSet1BindingSource
+            // 
+            this.mikeAndGianeDataSet1BindingSource.DataSource = this.mikeAndGianeDataSet1;
+            this.mikeAndGianeDataSet1BindingSource.Position = 0;
+            // 
+            // personasBindingSource
+            // 
+            this.personasBindingSource.DataMember = "personas";
+            this.personasBindingSource.DataSource = this.mikeAndGianeDataSet1BindingSource;
+            // 
+            // personasTableAdapter
+            // 
+            this.personasTableAdapter.ClearBeforeFill = true;
+            // 
+            // dniDataGridViewTextBoxColumn
+            // 
+            this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "dni";
+            this.dniDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
+            this.dniDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // apellidopatDataGridViewTextBoxColumn
+            // 
+            this.apellidopatDataGridViewTextBoxColumn.DataPropertyName = "apellidopat";
+            this.apellidopatDataGridViewTextBoxColumn.HeaderText = "apellidopat";
+            this.apellidopatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidopatDataGridViewTextBoxColumn.Name = "apellidopatDataGridViewTextBoxColumn";
+            this.apellidopatDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // apellidomatDataGridViewTextBoxColumn
+            // 
+            this.apellidomatDataGridViewTextBoxColumn.DataPropertyName = "apellidomat";
+            this.apellidomatDataGridViewTextBoxColumn.HeaderText = "apellidomat";
+            this.apellidomatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidomatDataGridViewTextBoxColumn.Name = "apellidomatDataGridViewTextBoxColumn";
+            this.apellidomatDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
+            this.direccionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.Width = 125;
             // 
             // FrmGianella
             // 
@@ -255,10 +305,8 @@ namespace FORMULARIOS
             this.BackgroundImage = global::FORMULARIOS.Properties.Resources.buyer_persona;
             this.ClientSize = new System.Drawing.Size(860, 645);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.txtapellidopat);
@@ -272,18 +320,20 @@ namespace FORMULARIOS
             this.Controls.Add(this.label1);
             this.Name = "FrmGianella";
             this.Text = "Gianella";
-            ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmGianella_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addinDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.TextBox txtapellidopat;
@@ -297,10 +347,18 @@ namespace FORMULARIOS
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnMostrar;
-        private System.Windows.Forms.Button btnActualizar;
         private ADDINDataSet addinDataSet1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource mikeAndGianeDataSetBindingSource;
         private mikeAndGianeDataSet mikeAndGianeDataSet;
+        private System.Windows.Forms.BindingSource mikeAndGianeDataSet1BindingSource;
+        private mikeAndGianeDataSet1 mikeAndGianeDataSet1;
+        private System.Windows.Forms.BindingSource personasBindingSource;
+        private mikeAndGianeDataSet1TableAdapters.personasTableAdapter personasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidopatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidomatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
     }
 }

@@ -105,6 +105,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>mikeAndGianeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="mikeAndGianeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mikeAndGianeDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ventas2022DataSet.Designer.cs">
@@ -161,6 +166,17 @@
     </None>
     <None Include="mikeAndGianeDataSet.xss">
       <DependentUpon>mikeAndGianeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mikeAndGianeDataSet1.xsc">
+      <DependentUpon>mikeAndGianeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="mikeAndGianeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mikeAndGianeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mikeAndGianeDataSet1.xss">
+      <DependentUpon>mikeAndGianeDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

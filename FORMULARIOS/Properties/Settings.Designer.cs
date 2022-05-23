@@ -54,5 +54,16 @@ namespace FORMULARIOS.Properties {
                 return ((string)(this["ADDINConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-TIFHNC74\\SQLEXPRESS;Initial Catalog=mikeAndGiane;Integrated Se" +
+            "curity=True")]
+        public string mikeAndGianeConnectionString1 {
+            get {
+                return ((string)(this["mikeAndGianeConnectionString1"]));
+            }
+        }
     }
 }
