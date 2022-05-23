@@ -211,5 +211,11 @@
   <ItemGroup>
     <None Include="Resources\animales-1200x700-1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vender-productos-por-internet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
