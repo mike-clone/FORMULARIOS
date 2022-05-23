@@ -51,11 +51,7 @@ namespace FORMULARIOS
             this.mikeAndGianeDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personasTableAdapter = new FORMULARIOS.mikeAndGianeDataSet1TableAdapters.personasTableAdapter();
-            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidopatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidomatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
@@ -182,7 +178,7 @@ namespace FORMULARIOS
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Red;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(664, 101);
+            this.btnSalir.Location = new System.Drawing.Point(664, 161);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(158, 34);
@@ -206,22 +202,16 @@ namespace FORMULARIOS
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dniDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidopatDataGridViewTextBoxColumn,
-            this.apellidomatDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.personasBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 329);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 409);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 265);
+            this.dataGridView1.Size = new System.Drawing.Size(778, 264);
             this.dataGridView1.TabIndex = 39;
             // 
             // mikeAndGianeDataSetBindingSource
@@ -258,52 +248,26 @@ namespace FORMULARIOS
             // 
             this.personasTableAdapter.ClearBeforeFill = true;
             // 
-            // dniDataGridViewTextBoxColumn
+            // btnEliminar
             // 
-            this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "dni";
-            this.dniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
-            this.dniDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // apellidopatDataGridViewTextBoxColumn
-            // 
-            this.apellidopatDataGridViewTextBoxColumn.DataPropertyName = "apellidopat";
-            this.apellidopatDataGridViewTextBoxColumn.HeaderText = "apellidopat";
-            this.apellidopatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidopatDataGridViewTextBoxColumn.Name = "apellidopatDataGridViewTextBoxColumn";
-            this.apellidopatDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // apellidomatDataGridViewTextBoxColumn
-            // 
-            this.apellidomatDataGridViewTextBoxColumn.DataPropertyName = "apellidomat";
-            this.apellidomatDataGridViewTextBoxColumn.HeaderText = "apellidomat";
-            this.apellidomatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidomatDataGridViewTextBoxColumn.Name = "apellidomatDataGridViewTextBoxColumn";
-            this.apellidomatDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
-            this.direccionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.Width = 125;
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(664, 112);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(158, 34);
+            this.btnEliminar.TabIndex = 40;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // FrmGianella
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FORMULARIOS.Properties.Resources.buyer_persona;
-            this.ClientSize = new System.Drawing.Size(860, 645);
+            this.ClientSize = new System.Drawing.Size(866, 685);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnSalir);
@@ -355,10 +319,6 @@ namespace FORMULARIOS
         private mikeAndGianeDataSet1 mikeAndGianeDataSet1;
         private System.Windows.Forms.BindingSource personasBindingSource;
         private mikeAndGianeDataSet1TableAdapters.personasTableAdapter personasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidopatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidomatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -70,5 +70,30 @@ namespace FORMULARIOS
             this.personasTableAdapter.Fill(this.mikeAndGianeDataSet1.personas);
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection giane = new SqlConnection(conexion))
+            {
+                SqlCommand cmd = new SqlCommand(" delete personas  where dni = " + int.Parse(txtdni.Text), giane);
+                cmd.CommandType = CommandType.Text;
+                giane.Open();
+                cmd.ExecuteNonQuery();
+            }
+            txtdni.Text = "";
+            txtNombre.Text = "";
+            txtapellidopat.Text = "";
+            txtapellidomat.Text = "";
+            txtdireccion.Text = "";
+            DataTable dt = new DataTable();
+            using (SqlConnection giane = new SqlConnection(conexion))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from personas ", giane);
+                da.SelectCommand.CommandType = CommandType.Text;
+                giane.Open();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+        }
     }
 }
