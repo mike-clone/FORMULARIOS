@@ -118,6 +118,9 @@
     <EmbeddedResource Include="FrmGianella.resx">
       <DependentUpon>FrmGianella.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMiguel.resx">
+      <DependentUpon>FrmMiguel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmOmar.resx">
       <DependentUpon>FrmOmar.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Paltas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animales-1200x700-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

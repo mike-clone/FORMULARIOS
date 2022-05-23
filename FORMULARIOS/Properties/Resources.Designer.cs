@@ -63,6 +63,16 @@ namespace FORMULARIOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap animales_1200x700_1 {
+            get {
+                object obj = ResourceManager.GetObject("animales-1200x700-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buyer_persona {
             get {
                 object obj = ResourceManager.GetObject("buyer-persona", resourceCulture);
