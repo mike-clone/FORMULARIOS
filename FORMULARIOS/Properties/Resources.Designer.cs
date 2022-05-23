@@ -89,5 +89,15 @@ namespace FORMULARIOS.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vender_productos_por_internet {
+            get {
+                object obj = ResourceManager.GetObject("vender-productos-por-internet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

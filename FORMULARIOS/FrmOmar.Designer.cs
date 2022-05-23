@@ -94,86 +94,94 @@ namespace FORMULARIOS
             // 
             // txtProductid
             // 
-            this.txtProductid.Location = new System.Drawing.Point(84, 102);
+            this.txtProductid.Location = new System.Drawing.Point(62, 102);
             this.txtProductid.Name = "txtProductid";
-            this.txtProductid.Size = new System.Drawing.Size(100, 22);
+            this.txtProductid.Size = new System.Drawing.Size(122, 22);
             this.txtProductid.TabIndex = 10;
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(532, 102);
+            this.txtStock.Location = new System.Drawing.Point(550, 102);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 22);
             this.txtStock.TabIndex = 11;
             // 
             // txtUnitprice
             // 
-            this.txtUnitprice.Location = new System.Drawing.Point(380, 102);
+            this.txtUnitprice.Location = new System.Drawing.Point(401, 102);
             this.txtUnitprice.Name = "txtUnitprice";
-            this.txtUnitprice.Size = new System.Drawing.Size(100, 22);
+            this.txtUnitprice.Size = new System.Drawing.Size(118, 22);
             this.txtUnitprice.TabIndex = 12;
             // 
             // txtProductname
             // 
-            this.txtProductname.Location = new System.Drawing.Point(234, 102);
+            this.txtProductname.Location = new System.Drawing.Point(211, 102);
             this.txtProductname.Name = "txtProductname";
-            this.txtProductname.Size = new System.Drawing.Size(100, 22);
+            this.txtProductname.Size = new System.Drawing.Size(158, 22);
             this.txtProductname.TabIndex = 13;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(690, 411);
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(668, 378);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(93, 37);
             this.btnSalir.TabIndex = 14;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 64);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.Size = new System.Drawing.Size(126, 22);
             this.label1.TabIndex = 15;
-            this.label1.Text = "productid";
+            this.label1.Text = "PRODUCTID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(259, 64);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(207, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(162, 22);
             this.label2.TabIndex = 16;
-            this.label2.Text = "productname";
+            this.label2.Text = "PRODUCTNAME";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(402, 64);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(404, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 17;
-            this.label3.Text = "unitPrice";
+            this.label3.Text = "UNITPRICE";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(553, 64);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(561, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 18;
-            this.label4.Text = "stock";
+            this.label4.Text = "STOCK";
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(550, 335);
+            this.btnInsertar.BackColor = System.Drawing.Color.Red;
+            this.btnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.Location = new System.Drawing.Point(522, 378);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(100, 36);
+            this.btnInsertar.Size = new System.Drawing.Size(128, 37);
             this.btnInsertar.TabIndex = 19;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Text = "INSERTAR";
+            this.btnInsertar.UseVisualStyleBackColor = false;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // productosBindingSource2
@@ -268,6 +276,7 @@ namespace FORMULARIOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FORMULARIOS.Properties.Resources.vender_productos_por_internet;
             this.ClientSize = new System.Drawing.Size(800, 469);
             this.Controls.Add(this.consultaTablaToolStrip);
             this.Controls.Add(this.dataGridView1);
