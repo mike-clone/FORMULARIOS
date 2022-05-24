@@ -23,3 +23,23 @@ select* from animales;
 
  SELECT * FROM NEGOCIO;
  ---------------------------------------------------
+ 
+ Create table Proveedor
+(
+IdProv int not null primary key,
+Raz_Social varchar (150) not null,
+Sector_Comercial varchar(50) not null,
+tipo_documento varchar (15) not null,
+num_documento int not null,
+direccion varchar (50) null,
+telefono int null
+)
+
+SELECT *FROM PROVEEDOR;
+insert into proveedor (IdProv,Raz_Social,Sector_Comercial,tipo_documento,num_documento,direccion,telefono)
+values(01,'Inv Trujillo','fdg','dni',534345,'dfbgs',54653);
+--------------------------------------------------------------------
+
+
+
+
