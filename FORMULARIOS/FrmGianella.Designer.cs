@@ -52,6 +52,8 @@ namespace FORMULARIOS
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personasTableAdapter = new FORMULARIOS.mikeAndGianeDataSet1TableAdapters.personasTableAdapter();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.personasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.personasTableAdapter1 = new FORMULARIOS.mikeAndGianeDataSetTableAdapters.personasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet)).BeginInit();
@@ -59,6 +61,7 @@ namespace FORMULARIOS
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -261,6 +264,15 @@ namespace FORMULARIOS
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // personasBindingSource1
+            // 
+            this.personasBindingSource1.DataMember = "personas";
+            this.personasBindingSource1.DataSource = this.mikeAndGianeDataSetBindingSource;
+            // 
+            // personasTableAdapter1
+            // 
+            this.personasTableAdapter1.ClearBeforeFill = true;
+            // 
             // FrmGianella
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -292,6 +304,7 @@ namespace FORMULARIOS
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mikeAndGianeDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +333,7 @@ namespace FORMULARIOS
         private System.Windows.Forms.BindingSource personasBindingSource;
         private mikeAndGianeDataSet1TableAdapters.personasTableAdapter personasTableAdapter;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.BindingSource personasBindingSource1;
+        private mikeAndGianeDataSetTableAdapters.personasTableAdapter personasTableAdapter1;
     }
 }

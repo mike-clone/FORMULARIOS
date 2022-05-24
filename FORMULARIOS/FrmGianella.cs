@@ -18,7 +18,7 @@ namespace FORMULARIOS
             InitializeComponent();
         }
         string conexion = "Data Source=LAPTOP-TIFHNC74\\SQLEXPRESS;Initial Catalog=mikeAndGiane;Integrated Security=True";
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -66,8 +66,6 @@ namespace FORMULARIOS
 
         private void FrmGianella_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'mikeAndGianeDataSet1.personas' Puede moverla o quitarla según sea necesario.
-            this.personasTableAdapter.Fill(this.mikeAndGianeDataSet1.personas);
 
         }
 
