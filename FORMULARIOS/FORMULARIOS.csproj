@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="Oracle.Web, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -125,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGianella.resx">
       <DependentUpon>FrmGianella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMary.resx">
+      <DependentUpon>FrmMary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMiguel.resx">
       <DependentUpon>FrmMiguel.cs</DependentUpon>
@@ -222,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4490381.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

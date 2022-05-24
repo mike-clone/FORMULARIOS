@@ -16,7 +16,7 @@ namespace FORMULARIOS
         public FrmCleiner()
         {
             InitializeComponent();
-            mostrar();
+            
         }
         string conexion = "Data Source=DESKTOP-R0RTQRL;Initial Catalog=Cleiner;Integrated Security=True";
         void Limpiar()
