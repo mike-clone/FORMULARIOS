@@ -55,3 +55,22 @@ Telefono char(9) not null,
 -----------------------------------------------------------------------------------
 
 
+create table productos
+(
+productid int primary key,
+productname varchar(20),
+unitprice float,
+stock int
+);
+
+select *from productos;
+-------------------------------------------------------------------------------
+--Gianella
+create table personas
+(
+dni integer primary key,
+Nombre varchar (50),
+apellidopat varchar (50),
+apellidomat varchar (50),
+direccion varchar (100)
+);
