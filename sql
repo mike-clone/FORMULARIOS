@@ -42,4 +42,16 @@ values(01,'Inv Trujillo','fdg','dni',534345,'dfbgs',54653);
 
 
 
+create table Trabajador(
+IdTrabajador int,
+dni char (8) not null,
+Nom_Trabajador varchar(40)  not null,
+Cargo varchar(30)  not null,
+Direccion varchar(20) not null,
+Correo varchar(30) not null,
+Telefono char(9) not null,
+);
+
+-----------------------------------------------------------------------------------
+
 
