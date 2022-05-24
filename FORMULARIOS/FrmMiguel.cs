@@ -25,7 +25,7 @@ namespace FORMULARIOS
         {
             using (SqlConnection mig = new SqlConnection(conexion))
             {
-                SqlCommand cmd = new SqlCommand("insert into animales (dueño,nombre,edad,raza) values (" + txtDueño.Text + ",'" + txtNombre.Text + "'," + int.Parse(txtEdad.Text) + ",'" + txtRaza.Text + "')", mig);
+                SqlCommand cmd = new SqlCommand("insert into animales (dueño,nombre,edad,raza) values ('" + txtDueño.Text + "','" + txtNombre.Text + "'," + int.Parse(txtEdad.Text) + ",'" + txtRaza.Text + "')", mig);
                 cmd.CommandType = CommandType.Text;
                 mig.Open();
                 cmd.ExecuteNonQuery();
